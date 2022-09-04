@@ -1,0 +1,238 @@
+/* start global rules */
+:root{
+    --dark-primary-color:hsl(300, 43%, 22%);
+    --soft-primary-color:hsl(333, 80%, 67%);
+    --dark-neutral-color:hsl(303, 10%, 53%);
+    --light-neutral-color:hsl(300, 24%, 96%);
+    --white-neutral-color:hsl(0, 0%, 100%);
+    --font-size:15px;
+    --main-padding:30px;
+}
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: var(--font-size);
+    font-family: 'League Spartan', sans-serif;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@media (max-width:400px) {
+    .container{
+        width: 100%;
+    }
+}
+/* Small Screens */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+    .container{
+        width: 950px;
+    }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+    .container{
+        width: 1150px;
+    }
+}
+/* end global rules */
+/* start stars section */
+.parent{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+}
+.container{
+    background-color: white;
+    box-shadow: 4px 4px 60px -13px #333;
+    padding: 60px;
+    position: relative;
+}
+.bg-top{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.bg-bottom{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 800px;
+}
+.stars-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.stars-row .text{
+    width: 40%;
+}
+.stars-row .text h2{
+    color: var(--dark-primary-color);
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 0.8;
+    padding: 20px;
+}
+.stars-row .text p{
+    color: var(--dark-neutral-color);
+    padding: 20px;
+    font-weight: 500;
+}
+.stars-sec{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-start;
+}
+.stars-sec .col{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    /* width: 100%; */
+    background-color: var(--light-neutral-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.stars-sec .col:nth-child(2){
+    margin-left: 40px;
+}
+.stars-sec .col:nth-child(3){
+    margin-left: 80px;
+}
+.stars-sec .stars{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.stars-sec .stars img{
+    width: 18.33px;
+    height: 17.25px;
+}
+.stars-sec .col p{
+    color: var(--dark-primary-color);
+    font-weight: 700;
+}
+/* end stars section */
+/* start review sec */
+.review-sec{
+    display: flex;
+    justify-content: space-between;
+}
+.review-sec .sec{
+    background-color: var(--dark-primary-color);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: fit-content;
+}
+.review-sec .sec:nth-child(2){
+    margin-top: 20px;
+}
+.review-sec .sec:nth-child(3){
+    margin-top: 40px;
+}
+.review-sec .info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    /* align-self: center; */
+}
+.review-sec .info img{
+    width: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.review-sec .info .text h3{
+    color: white;
+}
+.review-sec .info .text p{
+    color: var(--soft-primary-color);
+}
+.info + p{
+    color: white;
+}
+/* end review sec */
+@media (max-width:767px) {
+    .container{
+        padding: 15px;
+    }
+    .parent{
+        height: initial;
+    }
+    .stars-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .stars-row .text{
+        width: 100%;
+        text-align: center;
+    }
+    .stars-row .text h2{
+        font-size: 30px;
+        padding-bottom: 0;
+    }
+    .stars-sec{
+        width: 100%;
+    }
+    .stars-sec .col{
+        margin-left: 0 !important;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+    .review-sec{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .review-sec .sec{
+        width: 100%;
+        margin: 0 !important;
+        margin-bottom: 10px !important;
+        height: 221px;
+    }
+    .bg-top,
+    .bg-bottom{
+        display: none;
+    }
+}
